@@ -1,0 +1,96 @@
+{
+    "cities": [
+        {
+            "id": 1,
+            "value": "dubai",
+            "label": "Dubai"
+        },
+        {
+            "id": 2,
+            "value": "abudhabi",
+            "label": "Abu Dhabi"
+        },
+        {
+            "id": 3,
+            "value": "sharjah",
+            "label": "Sharjah"
+        },
+        {
+            "id": 4,
+            "value": "alfujayrah",
+            "label": "Al Fujayrah"
+        },
+        {
+            "id": 5,
+            "value": "badiyah",
+            "label": "Badiyah"
+        },
+        {
+            "id": 6,
+            "value": "zubarah",
+            "label": "Zubārah"
+        },
+        {
+            "id": 7,
+            "value": "ash",
+            "label": "Ash Sha‘m"
+        },
+        {
+            "id": 8,
+            "value": "huwaylat",
+            "label": "Huwaylāt"
+        },
+        {
+            "id": 9,
+            "value": "nahwah",
+            "label": "Naḩwah"
+        }
+    ],
+    "doctors": [
+        {
+            "id": 1,
+            "value": "aftab",
+            "label": "Dr. Aftab Alam"
+        },
+        {
+            "id": 2,
+            "value": "roshan",
+            "label": "Dr. Roshan Ali"
+        },
+        {
+            "id": 3,
+            "value": "papan",
+            "label": "Dr. Papan Khan"
+        },
+        {
+            "id": 4,
+            "value": "dost",
+            "label": "Dr. Dost Muhammad"
+        },
+        {
+            "id": 5,
+            "value": "haji",
+            "label": "Dr. Haji Shaikh"
+        },
+        {
+            "id": 6,
+            "value": "muhammad",
+            "label": "Dr. Muhammad Tahir"
+        },
+        {
+            "id": 7,
+            "value": "aamna",
+            "label": "Dr. Aamna Mahesar"
+        },
+        {
+            "id": 8,
+            "value": "kaleem",
+            "label": "Dr. Kaleemullah Mahesar"
+        },
+        {
+            "id": 9,
+            "value": "abdul",
+            "label": "Dr. Abdul Hadi"
+        }
+    ]
+}
