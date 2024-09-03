@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Slider from "./_components/Slider";
-import GlobalApi from "./_utils/GlobalApi";
 import ProductList from "./_components/ProductList";
 import Banner from "./_components/Banner";
 

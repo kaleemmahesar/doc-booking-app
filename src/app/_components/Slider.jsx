@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext,CarouselPrevious,} from "@/components/ui/carousel"
-import GlobalApi from '../_utils/GlobalApi'
 import Image from 'next/image'
 
 function Slider({sliderList}) {
