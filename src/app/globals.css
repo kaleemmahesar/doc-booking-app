@@ -88,22 +88,29 @@
 }
 
 .home-banner {
-    background: #f9f9f9 url(../../public/images/home_bg.jpg) no-repeat center;
-    background-image: linear-gradient(120deg, #005cbf 0%, #396cf000 100%), url(../../public/images/home_bg.jpg) !important;
-    min-height: 320px;
-    background-size: 100% auto;
-    position: relative;
-    /* background-blend-mode: Darken; */
-    padding: 55px 0 0;
+  min-height: 600px;
+  position: relative;
+  background-color: white;
+  background-image: url(../../public/images/rb2.jpg);
+  background-position: top right;
+  background-repeat: no-repeat;
 }
+
 html[dir="rtl"] .home-banner {
-  background: #f9f9f9 url(../../public/images/home_bg_ar.jpg) no-repeat center;
-  background-image: linear-gradient(240deg, #005cbf 0%, #396cf000 100%), url(../../public/images/home_bg_ar.jpg) !important;
-  background-size: 100% auto;
+  background-image: url(../../public/images/rb2_ar.jpg);
+  background-position: top left;
+  background-repeat: no-repeat;
 }
+
 input,
 input:focus,
 input:active {
   outline: none !important;
   border: none !important;
+}
+.deactive {
+  display: none;
+}
+.active {
+  display: block;
 }

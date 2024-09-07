@@ -1,8 +1,55 @@
 {
-    "HomePage": {
-      "title": "Search Doctor, Make an Appointment",
-      "slug": "Discover the best doctor, clinic & hospital the city nearist to you.",
-      "cityFieldValue": "eg Al Ain",
-      "docFieldValue": "Find by speciality, doctor, clinic or hospital"
-    }
-  }
+	"HomePage": {
+		"title": "Search Doctor, Make an Appointment",
+		"slug": "Discover the best doctor, clinic & hospital the city nearist to you.",
+		"cityFieldValue": "Select City",
+		"docFieldValue": "Find by speciality, doctor, clinic or hospital",
+		"doctorsList": [
+			{
+				"id": 1,
+				"value": "aftab",
+				"label": "Dr. Aftab Alam"
+			},
+			{
+				"id": 2,
+				"value": "roshan",
+				"label": "Dr. Roshan Ali"
+			},
+			{
+				"id": 3,
+				"value": "papan",
+				"label": "Dr. Papan Khan"
+			},
+			{
+				"id": 4,
+				"value": "dost",
+				"label": "Dr. Dost Muhammad"
+			},
+			{
+				"id": 5,
+				"value": "haji",
+				"label": "Dr. Haji Shaikh"
+			},
+			{
+				"id": 6,
+				"value": "muhammad",
+				"label": "Dr. Muhammad Tahir"
+			},
+			{
+				"id": 7,
+				"value": "aamna",
+				"label": "Dr. Aamna Mahesar"
+			},
+			{
+				"id": 8,
+				"value": "kaleem",
+				"label": "Dr. Kaleemullah Mahesar"
+			},
+			{
+				"id": 9,
+				"value": "abdul",
+				"label": "Dr. Abdul Hadi"
+			}
+		]
+	}
+}

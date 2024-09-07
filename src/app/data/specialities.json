@@ -46,51 +46,99 @@
             "label": "Naḩwah"
         }
     ],
+    "specialization" : [
+        {"id": 1, "label": "Gynecologist", "value":"Gynecologist"},
+        {"id": 2, "label": "Pediatrician", "value":"Pediatrician"},
+        {"id": 3, "label": "General Physician", "value":"generalphysician"},
+        {"id": 4, "label": "Dentist", "value":"dentist"},
+        {"id": 5, "label": "Gastroenterologist", "value":"gastroenterologist"},
+        {"id": 6, "label": "Diabetologist", "value":"diabetologist"},
+        {"id": 7, "label": "General Surgeon", "value":"generalsurgeon"},
+        {"id": 8, "label": "Pain Management Specialist", "value":"painmanagement"},
+        {"id": 9, "label": "Pediatric Surgeon", "value":"pediatric"}
+    ],
     "doctors": [
         {
             "id": 1,
             "value": "aftab",
-            "label": "Dr. Aftab Alam"
+            "label": "Dr. Aftab Alam",
+            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc1.png",
+            "city": "abudhabi",
+            "speciality": "Specialist, Orthodontist",
+            "hospital_name": "NMC Royal Hospital, Abu Dhabi"
         },
         {
             "id": 2,
             "value": "roshan",
-            "label": "Dr. Roshan Ali"
+            "label": "Dr. Roshan Ali",
+            "city": "dubai",
+            "hospital_name": "NMC Royal Hospital, Dubai",
+            "speciality": "General Dentist",
+            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc2.png"
+            
         },
         {
             "id": 3,
             "value": "papan",
-            "label": "Dr. Papan Khan"
+            "label": "Dr. Papan Khan",
+            "speciality": "General Dentist",
+            "hospital_name": "NMC Royal Hospital, Nahwah",
+            "city": "nahwah",
+            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc3.png"
         },
         {
             "id": 4,
             "value": "dost",
-            "label": "Dr. Dost Muhammad"
+            "label": "Dr. Dost Muhammad",
+            "speciality": "Specialist, Paediatric Dentistry",
+            "hospital_name": "NMC Royal Hospital, Ash",
+            "city": "ash",
+            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc4.png"
         },
         {
             "id": 5,
             "value": "haji",
-            "label": "Dr. Haji Shaikh"
+            "city": "badiyah",
+            "speciality": "Specialist, Paediatric Dentistry",
+            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "label": "Dr. Haji Shaikh",
+            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc5.jpeg"
         },
         {
             "id": 6,
             "value": "muhammad",
-            "label": "Dr. Muhammad Tahir"
+            "city": "badiyah",
+            "speciality": "Specialist, Paediatric Dentistry",
+            "label": "Dr. Muhammad Tahir",
+            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc6.jpeg"
         },
         {
             "id": 7,
             "value": "aamna",
-            "label": "Dr. Aamna Mahesar"
+            "city": "badiyah",
+            "speciality": "Consultant Pediatrician",
+            "label": "Dr. Aamna Mahesar",
+            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc7.jpeg"
         },
         {
             "id": 8,
-            "value": "kaleem",
-            "label": "Dr. Kaleemullah Mahesar"
+            "value": "suman",
+            "city": "badiyah",
+            "speciality": "Specialist, Paediatric Cardiology",
+            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "label": "Dr. Suman Mahesar",
+            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc8.png"
         },
         {
             "id": 9,
             "value": "abdul",
-            "label": "Dr. Abdul Hadi"
+            "city": "badiyah",
+            "speciality": "Specialist, Paediatric Cardiology",
+            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "label": "Dr. Abdul Hadi",
+            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc9.png"
         }
     ]
 }

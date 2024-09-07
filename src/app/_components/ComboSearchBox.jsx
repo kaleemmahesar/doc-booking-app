@@ -22,12 +22,10 @@ import { CommandSeparator } from "cmdk"
 
 
 
-function ComboSearchBox({boxwidth, title, specialities}) {
+function ComboSearchBox({boxwidth, title, cities}) {
     const [open, setOpen] = React.useState(false)
     const [value, setValue] = React.useState("")
-    const text = 'search city'
-    // console.log(specialities.specialities)
-    // console.log(value)
+    console.log(value)
     return (
         <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
@@ -38,7 +36,7 @@ function ComboSearchBox({boxwidth, title, specialities}) {
             className={`w-[400px] justify-between`}
             >
           {value
-            ? specialities.find((city) => city.value === value)?.label
+            ? cities.find((city) => city.value === value)?.label
             : title}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
@@ -49,7 +47,7 @@ function ComboSearchBox({boxwidth, title, specialities}) {
                     <CommandList>
                         <CommandEmpty>No doctor / specialities found.</CommandEmpty>
                         <CommandGroup>
-                            {specialities?.map((city) => (
+                            {cities?.map((city) => (
                                 <CommandItem key={city.id} value={city.value}
                                     onSelect={(currentValue) => {
                                         setValue(currentValue === value ? "" : currentValue)
