@@ -21,15 +21,18 @@ import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { ArrowDown, Check, CheckIcon, ChevronsUpDown, LocateIcon } from "lucide-react"
 import { CaretDownIcon, CaretUpIcon } from "@radix-ui/react-icons"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 
 const languages = [
-    { id: 1, value: "English", label: "English", flagName:"us" , langValue: "en" },
-    { id: 2, value: "Kurdish", label: "Kurdish", flagName:"iq",  langValue: "ku" },
-    { id: 3, value: "Arabic", label: "Arabic", flagName:"ae",  langValue: "ar" }
+    { id: 1, value: "en", label: "English" },
+    { id: 2, value: "ku", label: "Kurdish"},
+    { id: 3, value: "ar", label: "Arabic" }
 ]
 
-function LanguageSwticher() {
+function LanguageSwticher({locale, params}) {
+    console.log(locale)
+    const pathName = usePathname()
+    console.log(params)
     const [open, setOpen] = useState(false)
     const [value, setValue] = useState("")
     const router = useRouter();
@@ -45,6 +48,23 @@ function LanguageSwticher() {
                     className="w-[225px] justify-between text-lg h-12"
                 >
                     {value
+                    ? languages.find((framework) => framework.value === value) ? 
+                        <div className="flex gap-3">
+                                <Image src={`/images/${locale}.svg`} alt="en" width={25} height={25} />
+                                <span>{value}</span>
+                            </div> : ''  
+                    : 
+                        <div className="flex gap-3">
+                            <Image src={`/images/${locale}.svg`} alt="en" width={25} height={25} />
+                            <span>
+                                {locale === 'en' && "English"}
+                                {locale === 'ar' && "Arabic"}
+                                {locale === 'ku' && "Kurdish"}
+                            </span>
+                        </div>
+                    }
+                    { open ? <CaretDownIcon className="ml-2 h-6 w-6 shrink-0 opacity-70" /> : <CaretUpIcon className="ml-2 h-6 w-6 shrink-0 opacity-70" /> }
+                    {/* {value
                         ? 
                             languages.find((framework) => framework.value === value) ?  
                             <div className="flex gap-3">
@@ -57,7 +77,7 @@ function LanguageSwticher() {
                                 <span>English</span>
                             </div>
                     }
-                    { open ? <CaretDownIcon className="ml-2 h-6 w-6 shrink-0 opacity-70" /> : <CaretUpIcon className="ml-2 h-6 w-6 shrink-0 opacity-70" /> }
+                    */}
                 </Button>
             </PopoverTrigger>
             <PopoverContent className="w-[225px] p-0">
@@ -72,7 +92,9 @@ function LanguageSwticher() {
                                     onSelect={(currentValue) => {
                                         setValue(currentValue === value ? "" : currentValue)
                                         setOpen(false)
-                                        router.push(`${framework.langValue}`)
+                                        router.push(`/${framework.value}`)
+                                        // console.log(value)
+                                        // router.push(`${framework.langValue}`)
                                     }}
                                 >
                                     <Check
@@ -82,7 +104,7 @@ function LanguageSwticher() {
                                         )}
                                     />
                                     <Link href="/en" className="flex gap-3">
-                                        <Image src={`/images/${framework.flagName}.svg`} alt="en" width={25} height={25} />
+                                        <Image src={`/images/${framework.value}.svg`} alt="en" width={25} height={25} />
                                         <span>{framework.label}</span>
                                     </Link>
                 

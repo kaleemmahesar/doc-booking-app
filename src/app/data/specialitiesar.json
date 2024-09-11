@@ -1,27 +1,67 @@
 {
-	"HomePage": {
-		"title": "Search Doctor, Make an Appointment",
-		"slug": "Discover the best doctor, clinic & hospital the city nearist to you.",
-		"cityFieldValue": "Select City",
-		"docFieldValue": "Find by speciality, doctor, clinic or hospital",
-        "docsLabelValue": "Doctors List",
-        "specialLabel": "Specialization List",
+    "cities": [
+        {
+            "id": 1,
+            "value": "dubai",
+            "label": "Dubai"
+        },
+        {
+            "id": 2,
+            "value": "abudhabi",
+            "label": "Abu Dhabi"
+        },
+        {
+            "id": 3,
+            "value": "sharjah",
+            "label": "Sharjah"
+        },
+        {
+            "id": 4,
+            "value": "alfujayrah",
+            "label": "Al Fujayrah"
+        },
+        {
+            "id": 5,
+            "value": "badiyah",
+            "label": "Badiyah"
+        },
+        {
+            "id": 6,
+            "value": "zubarah",
+            "label": "Zubārah"
+        },
+        {
+            "id": 7,
+            "value": "ash",
+            "label": "Ash Sha‘m"
+        },
+        {
+            "id": 8,
+            "value": "huwaylat",
+            "label": "Huwaylāt"
+        },
+        {
+            "id": 9,
+            "value": "nahwah",
+            "label": "Naḩwah"
+        }
+    ],
     "specialization" : [
-        {"id": 1, "label": "Gynecologist", "value":"Gynecologist"},
-        {"id": 2, "label": "Pediatrician", "value":"Pediatrician"},
+        {"id": 1, "label": "طبيب نسائي", "value":"Gynecologist"},
+        {"id": 2, "label": "طبيب أطفال", "value":"Pediatrician"},
         {"id": 3, "label": "General Physician", "value":"generalphysician"},
-        {"id": 4, "label": "Dentist", "value":"dentist"},
-        {"id": 5, "label": "Gastroenterologist", "value":"gastroenterologist"},
-        {"id": 6, "label": "Diabetologist", "value":"diabetologist"},
-        {"id": 7, "label": "General Surgeon", "value":"generalsurgeon"},
-        {"id": 8, "label": "Pain Management Specialist", "value":"painmanagement"},
-        {"id": 9, "label": "Pediatric Surgeon", "value":"pediatric"}
+        {"id": 4, "label": "طبيب عام", "value":"dentist"},
+        {"id": 5, "label": "طبيب الجهاز الهضمي", "value":"gastroenterologist"},
+        {"id": 6, "label": "طبيب امراض السكر", "value":"diabetologist"},
+        {"id": 7, "label": "جراح عام", "value":"generalsurgeon"},
+        {"id": 8, "label": "أخصائي إدارة الألم", "value":"painmanagement"},
+        {"id": 9, "label": "جراح الأطفال", "value":"pediatric"}
     ],
     "doctors": [
         {
             "id": 1,
             "value": "aftab",
-            "label": "Dr. Aftab Alam",
+            "label": "الدكتور افتاب علم",
             "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc1.png",
             "city": "abudhabi",
             "speciality": "Specialist, Orthodontist",
@@ -30,7 +70,7 @@
         {
             "id": 2,
             "value": "roshan",
-            "label": "Dr. Roshan Ali",
+            "label": "الدكتور روشان علي",
             "city": "dubai",
             "hospital_name": "NMC Royal Hospital, Dubai",
             "speciality": "General Dentist",
@@ -40,7 +80,7 @@
         {
             "id": 3,
             "value": "papan",
-            "label": "Dr. Papan Khan",
+            "label": "الدكتور بابان خان",
             "speciality": "General Dentist",
             "hospital_name": "NMC Royal Hospital, Nahwah",
             "city": "nahwah",
@@ -49,7 +89,7 @@
         {
             "id": 4,
             "value": "dost",
-            "label": "Dr. Dost Muhammad",
+            "label": "الدكتور دوست محمد",
             "speciality": "Specialist, Paediatric Dentistry",
             "hospital_name": "NMC Royal Hospital, Ash",
             "city": "ash",
@@ -61,7 +101,7 @@
             "city": "badiyah",
             "speciality": "Specialist, Paediatric Dentistry",
             "hospital_name": "NMC Royal Hospital, Badiyah",
-            "label": "Dr. Haji Shaikh",
+            "label": "الدكتور حاجي شيخ",
             "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc5.jpeg"
         },
         {
@@ -69,7 +109,7 @@
             "value": "muhammad",
             "city": "badiyah",
             "speciality": "Specialist, Paediatric Dentistry",
-            "label": "Dr. Muhammad Tahir",
+            "label": "الدكتور محمد طاهر",
             "hospital_name": "NMC Royal Hospital, Badiyah",
             "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc6.jpeg"
         },
@@ -78,7 +118,7 @@
             "value": "aamna",
             "city": "badiyah",
             "speciality": "Consultant Pediatrician",
-            "label": "Dr. Aamna Mahesar",
+            "label": "الدكتورة آمنة ماهيسار",
             "hospital_name": "NMC Royal Hospital, Badiyah",
             "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc7.jpeg"
         },
@@ -88,7 +128,7 @@
             "city": "badiyah",
             "speciality": "Specialist, Paediatric Cardiology",
             "hospital_name": "NMC Royal Hospital, Badiyah",
-            "label": "Dr. Suman Mahesar",
+            "label": "الدكتورة سومان ماهيسار",
             "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc8.png"
         },
         {
@@ -97,9 +137,8 @@
             "city": "badiyah",
             "speciality": "Specialist, Paediatric Cardiology",
             "hospital_name": "NMC Royal Hospital, Badiyah",
-            "label": "Dr. Abdul Hadi",
+            "label": "الدكتور عبد الهادي",
             "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc9.png"
         }
     ]
-	}
 }

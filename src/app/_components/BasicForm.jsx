@@ -43,7 +43,8 @@ const formSchema = z.object({
 
 
 
-function BasicForm({cityField, docField, specialities}) {
+function BasicForm({cityField, docField, specialities, specialLabel, docsLabelValue}) {
+    console.log(specialities)
     const pathname = usePathname()
     const router = useRouter()
     // 1. Define your form.
@@ -231,26 +232,8 @@ function BasicForm({cityField, docField, specialities}) {
                     <Input ref={myRef} className='outline-none text-md focus:outline-none focus:ring-0 rounded-md h-16 border-0 px-5 ring-0 bg-slate-100 w-[450px]' placeholder={docField} onBlur={handleInputBlur} onFocus={openDocMenu} onChange={(e) => handleInputChange(e.target.value)} />
                     
                     <div className={`flex flex-col absolute h-[300px] overflow-y-auto right-0 top-20 rounded-md shadow-lg bg-white w-[450px] ${fieldFocused ? 'opacity-100' : 'opacity-0'}`}>
-                    <h2 className="text-xl mt-5 mb-3 px-5 text-slate-400">Doctors List</h2>
-                    {doctorsList.length > 0 ?
                     
-                                doctorsList?.map((doctor) => {
-                                    const {label, value }  = doctor
-                                    return (
-                                        <div className={`doc-name`}>
-                                            <Button type="button"
-                                                className={`w-full capitalize text-black p-6 text-lg border-0 bg-transparent hover:bg-transparent text-left justify-start`}
-                                                onClick={() => handleInputFieldValue({label, value })}
-                                            >
-                                                {doctor?.label}
-                                            </Button>
-                                        </div>
-                                    )
-                                })
-                            : 
-                                <div className='w-full capitalize text-primary p-6 text-lg border-0 bg-transparent hover:bg-transparent text-left justify-start'>No Doctors Found</div>
-                            }
-                            <h2 className="text-xl mt-5 mb-3 px-5 text-slate-400">Specialization List</h2>
+                            <h2 className="text-xl mt-5 mb-3 px-5 text-slate-400">{specialLabel}</h2>
                 
                 {specializationList.length > 0 ?
                     
@@ -270,6 +253,25 @@ function BasicForm({cityField, docField, specialities}) {
                 : 
                     <div className='w-full capitalize text-primary p-6 text-lg border-0 bg-transparent hover:bg-transparent text-left justify-start'>No Specialization Found</div>
                 }
+                <h2 className="text-xl mt-5 mb-3 px-5 text-slate-400">{docsLabelValue}</h2>
+                    {doctorsList.length > 0 ?
+                    
+                                doctorsList?.map((doctor) => {
+                                    const {label, value }  = doctor
+                                    return (
+                                        <div className={`doc-name`}>
+                                            <Button type="button"
+                                                className={`w-full capitalize text-black p-6 text-lg border-0 bg-transparent hover:bg-transparent text-left justify-start`}
+                                                onClick={() => handleInputFieldValue({label, value })}
+                                            >
+                                                {doctor?.label}
+                                            </Button>
+                                        </div>
+                                    )
+                                })
+                            : 
+                                <div className='w-full capitalize text-primary p-6 text-lg border-0 bg-transparent hover:bg-transparent text-left justify-start'>No Doctors Found</div>
+                            }
                         </div>
                     {/* {fieldFocused && 
                         <div className="flex flex-col absolute right-0 top-20 rounded-md shadow-md bg-white w-[450px]">

@@ -7,6 +7,17 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+	container: {
+		center: true,
+		// default breakpoints but with 40px removed
+		screens: {
+			sm: '600px',
+			md: '728px',
+			lg: '984px',
+			xl: '1240px',
+			'2xl': '1240px',
+		},
+	},
   	extend: {
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -20,6 +31,10 @@ module.exports = {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+			secondprimary: {
+				background: '#51783e',
+  				foreground: 'hsl(var(--foreground))',
+			},
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -29,7 +44,7 @@ module.exports = {
   				foreground: 'hsl(var(--popover-foreground))'
   			},
   			primary: {
-  				DEFAULT: '#005cbf',
+  				DEFAULT: '#0399ec',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {

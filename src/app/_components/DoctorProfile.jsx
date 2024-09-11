@@ -46,7 +46,7 @@ const formSchema = z.object({
     }),
 })
 
-function Doctor({doctor, locale}) {
+function DoctorProfile({doctor, locale}) {
     const [optSent, setOptSent] = useState(false)
     const optField = useRef(null)
     const form = useForm({
@@ -62,34 +62,32 @@ function Doctor({doctor, locale}) {
     }
     
     return (
-        <div className='flex w-full rounded-md p-6 bg-white shadow-lg items-start'>
-            <Image src={doctor.image_url}  width={130} height={130} alt='doc' className='mt-5 rounded-full' />
-            <Card className={`border-0 p-0 flex flex-col shadow-none ${locale === 'en' ? 'mr-auto ml-6' : 'ml-auto mr-6'}`}>
-                
-                <CardHeader className="p-0 flex flex-row gap-5">
-                    <div className='mt-8 flex gap-y-1 flex-col justify-between'>
-                        <CardTitle className='text-2xl mb-3'>{doctor.label}</CardTitle>
-                        <p className='text-lg'>{doctor.speciality}</p>
-                        <p className='text-lg'>M.B.B.S., F.C.P.S. (Gynecology and Obstetrics)</p>
-                        <p className='text-lg capitalize'>{doctor.city}</p>
+        <div className='flex items-start justify-between'>
+            <div className='flex items-start'>
+                <Image src={doctor.image_url}  width={130} height={130} alt='doc' className='mt-5 rounded-full' />
+                <Card className={`bg-transparent border-0 p-0 flex flex-col shadow-none ${locale === 'en' ? 'mr-auto ml-6' : 'ml-auto mr-6'}`}>
+                    <CardHeader className="p-0 flex flex-row gap-5">
+                        <div className='mt-8 flex gap-y-1 flex-col justify-between'>
+                            <CardTitle className='text-2xl mb-3'>{doctor.label}</CardTitle>
+                            <p className='text-lg'>{doctor.speciality}</p>
+                            <p className='text-lg'>M.B.B.S., F.C.P.S. (Gynecology and Obstetrics)</p>
+                            <p className='text-lg capitalize'>{doctor.city}</p>
+                        </div>
+                    </CardHeader>
+                    <div className='mt-8 flex gap-y-1 flex-row gap-16'>
+                        <h2 className='flex flex-col text-lg'>
+                            <b>15 - 30 Min</b>
+                            <span>Wait Time</span>
+                        </h2>
+                        <hr className='border-r mt-2 border-gray-200 h-[46px]' />
+                        <h2 className='flex flex-col text-lg'>
+                            <b>16 Years</b>
+                            <span>Experience</span>
+                        </h2>
                     </div>
-                </CardHeader>
-                <div className='mt-8 flex gap-y-1 flex-row gap-16'>
-                    <h2 className='flex flex-col text-lg'>
-                        <b>15 - 30 Min</b>
-                        <span>Wait Time</span>
-                    </h2>
-                    <hr className='border-r mt-2 border-gray-200 h-[46px]' />
-                    <h2 className='flex flex-col text-lg'>
-                        <b>16 Years</b>
-                        <span>Experience</span>
-                    </h2>
-                </div>
-            </Card>
+                </Card>
+            </div>
             <div className='flex flex-col gap-5 mt-6'>
-                <Link href={`/${locale}/doctors/profile/${doctor.id}`} className={buttonVariants({ variant: "outline"})}>
-                    <span className='text-md'>View Profile</span>
-                </Link>
                 <Dialog>
                     <DialogTrigger asChild>
                         <Button type="button" className='w-48 text-lg p-6 rounded-md'>Book Now</Button>
@@ -141,4 +139,4 @@ function Doctor({doctor, locale}) {
     )
 }
 
-export default Doctor
+export default DoctorProfile

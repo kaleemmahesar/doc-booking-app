@@ -11,11 +11,12 @@ import {
 import specialities from '../../data/specialities.json'
 import Doctors from '@/app/_components/Doctors'
 
-function SearchResults({searchParams}) {
+function SearchResults({searchParams, params: {locale}}) {
+    
     return (
-        <div className='search-results mt-16'>
+        <div className='search-results py-16 bg-slate-100'>
             <div className="container md:mx-auto">
-                <Doctors searchQuery={searchParams} doctors={specialities.doctors} />
+                <Doctors searchQuery={searchParams} locale={locale} doctors={specialities.doctors} />
             </div>
         </div>
     )
