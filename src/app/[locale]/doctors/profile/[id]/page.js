@@ -9,8 +9,8 @@ async function page({params, params: {locale}}) {
     })
     console.log(doctor)
     return(
-        <div className='search-results py-16'>
-            <div className="container md:mx-auto">
+        <div className='search-results'>
+            <div className="">
                 <DoctorProfile doctor={doctor} locale={locale} />
             </div>
         </div>

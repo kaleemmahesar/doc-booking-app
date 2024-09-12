@@ -10,12 +10,14 @@ import {
 
 import specialities from '../../data/specialities.json'
 import Doctors from '@/app/_components/Doctors'
+import DoctorsFiltersBar from '@/app/_components/DoctorsFiltersBar'
 
 function SearchResults({searchParams, params: {locale}}) {
     
     return (
-        <div className='search-results py-16 bg-slate-100'>
-            <div className="container md:mx-auto">
+        <div className='search-results bg-slate-100'>
+            <DoctorsFiltersBar />
+            <div className="container md:mr-auto">
                 <Doctors searchQuery={searchParams} locale={locale} doctors={specialities.doctors} />
             </div>
         </div>

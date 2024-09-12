@@ -13,7 +13,7 @@ function SpecialitiesList({specializations}) {
     }
     return (
         <div className='ps-grid py-10'>
-            <div className='container md:m-auto'>
+            <div className='container mx-auto'>
                 <div className='flex justify-between items-center mb-5'>
                     <h2 className='text-3xl font-bold mb-6'>Consult best doctors online</h2>
                     <Button variant="outline" onClick={()=>handleClick()}>View All</Button>

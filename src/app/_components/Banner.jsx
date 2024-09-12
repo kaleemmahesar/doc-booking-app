@@ -18,7 +18,7 @@ function Banner({translations, specialities}) {
     
     return (
         <div className='flex flex-col justify-center align-middle content-center home-banner'>
-            <div className='container md:mx-auto'>
+            <div className='container mx-auto'>
                     <h2 className='text-3xl text-center leading-9 w-[740px] font-extrabold mb-3 uppercase'>{translations('title')}</h2>
                     <h3 className='text-2xl text-center w-[740px] leading-9 mb-14'>{translations('slug')}</h3>
                     {/* <Link href="/" className='inline-flex p-8 text-2xl items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-12'>ALL DOCTORS</Link> */}

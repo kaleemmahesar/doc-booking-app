@@ -229,9 +229,9 @@ function BasicForm({cityField, docField, specialities, specialLabel, docsLabelVa
                     )}
                 /> */}
                 <div className="relative">
-                    <Input ref={myRef} className='outline-none text-md focus:outline-none focus:ring-0 rounded-md h-16 border-0 px-5 ring-0 bg-slate-100 w-[450px]' placeholder={docField} onBlur={handleInputBlur} onFocus={openDocMenu} onChange={(e) => handleInputChange(e.target.value)} />
+                    <Input ref={myRef} className='outline-none text-md focus:outline-none focus:ring-0 rounded-md h-16 border-0 px-5 ring-0 bg-slate-100 w-[400px]' placeholder={docField} onBlur={handleInputBlur} onFocus={openDocMenu} onChange={(e) => handleInputChange(e.target.value)} />
                     
-                    <div className={`flex flex-col absolute h-[300px] overflow-y-auto right-0 top-20 rounded-md shadow-lg bg-white w-[450px] ${fieldFocused ? 'opacity-100' : 'opacity-0'}`}>
+                    <div className={`flex flex-col absolute h-[300px] overflow-y-auto right-0 top-20 rounded-md shadow-lg bg-white w-[400px] ${fieldFocused ? 'opacity-100' : 'opacity-0'}`}>
                     
                             <h2 className="text-xl mt-5 mb-3 px-5 text-slate-400">{specialLabel}</h2>
                 

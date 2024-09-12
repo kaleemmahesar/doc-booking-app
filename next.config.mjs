@@ -5,7 +5,7 @@ const withNextIntel = createNextIntlPlugin()
 const nextConfig = {
     reactStrictMode: false,
     images: {
-        domains: ['localhost'],
+        domains: ['localhost', 'picsum.photos'],
     },
 }
 

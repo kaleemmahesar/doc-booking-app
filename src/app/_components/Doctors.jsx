@@ -5,8 +5,7 @@ import Doctor from './Doctor'
 function Doctors({doctors,searchQuery, locale}) {
     return (
         <div className='doctors-list'>
-            <div className="container md:mx-auto">
-                <h2 className='text-3xl font-bold text-center mb-10'>List of Doctors</h2>
+            <div className="py-6">
             <div className="flex flex-col gap-12">
             {
                 doctors?.map((doctor, index) => {

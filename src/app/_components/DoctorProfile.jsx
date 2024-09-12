@@ -62,78 +62,111 @@ function DoctorProfile({doctor, locale}) {
     }
     
     return (
-        <div className='flex items-start justify-between'>
-            <div className='flex items-start'>
-                <Image src={doctor.image_url}  width={130} height={130} alt='doc' className='mt-5 rounded-full' />
-                <Card className={`bg-transparent border-0 p-0 flex flex-col shadow-none ${locale === 'en' ? 'mr-auto ml-6' : 'ml-auto mr-6'}`}>
-                    <CardHeader className="p-0 flex flex-row gap-5">
-                        <div className='mt-8 flex gap-y-1 flex-col justify-between'>
-                            <CardTitle className='text-2xl mb-3'>{doctor.label}</CardTitle>
-                            <p className='text-lg'>{doctor.speciality}</p>
-                            <p className='text-lg'>M.B.B.S., F.C.P.S. (Gynecology and Obstetrics)</p>
-                            <p className='text-lg capitalize'>{doctor.city}</p>
+        <div className='doc-profile py-16 bg-slate-100'>
+            <div className='container mx-auto flex items-start justify-between'>
+                <div className='flex flex-col flex-auto w-64 gap-10'>
+                    <div className='flex items-start bg-white p-8 rounded-md shadow-md mr-16'>
+                        <Image src={doctor.image_url}  width={200} height={100} alt='doc' className='border-2' />
+                        <Card className={`bg-transparent border-0 p-0 flex flex-col shadow-none ${locale === 'en' ? 'mr-14 ml-6' : 'mr-6 ml-6'}`}>
+                            <CardHeader className="p-0 flex flex-row gap-5">
+                                <div className='flex gap-y-1 flex-col justify-between'>
+                                    <CardTitle className='text-3xl mb-3 font-bold'>{doctor.label}</CardTitle>
+                                    <p className='text-xl'>{doctor.speciality}</p>
+                                    <p className='text-xl'>21 Years of Experience</p>
+                                </div>
+                            </CardHeader>
+                        </Card>
+                        <div className='flex flex-col'>
+                            <h2 className='mb-5 font-bold text-2xl'>Specializations</h2>
+                            <div className='gap-2 flex w-96 flex-wrap mb-8'>
+                                { doctor?.practical_experience?.map(person => <Button type="button" variant="secondary" className='font-bold py-0 px-3'>{person}</Button>) }
+                            </div>
                         </div>
-                    </CardHeader>
-                    <div className='mt-8 flex gap-y-1 flex-row gap-16'>
-                        <h2 className='flex flex-col text-lg'>
-                            <b>15 - 30 Min</b>
-                            <span>Wait Time</span>
-                        </h2>
-                        <hr className='border-r mt-2 border-gray-200 h-[46px]' />
-                        <h2 className='flex flex-col text-lg'>
-                            <b>16 Years</b>
-                            <span>Experience</span>
-                        </h2>
                     </div>
-                </Card>
-            </div>
-            <div className='flex flex-col gap-5 mt-6'>
-                <Dialog>
-                    <DialogTrigger asChild>
-                        <Button type="button" className='w-48 text-lg p-6 rounded-md'>Book Now</Button>
-                    </DialogTrigger>
-                    <DialogContent className="sm:max-w-[425px]">
-                        <DialogHeader>
-                            <DialogTitle>Please provide number to continue</DialogTitle>
-                            <DialogDescription>
-                                Make sure number is active. An OTP will be sent for verification.
-                            </DialogDescription>
-                        </DialogHeader>
-                        <Form {...form}>
-                            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
-                                <FormField
-                                ref={optField}
-                                control={form.control}
-                                name="phone"
-                                render={({ field }) => (
-                                    <FormItem>
-                                    <FormLabel>Phone Number</FormLabel>
-                                    <FormControl>
-                                        <Input className='bg-slate-100 w-full' placeholder="+91" {...field} />
-                                    </FormControl>
-                                    <FormMessage />
-                                    </FormItem>
-                                )}
-                                />
-                                {optSent &&
-                                    <InputOTP maxLength={4}>
-                                        <InputOTPGroup>
-                                            <InputOTPSlot index={0} className='bg-slate-100' />
-                                            <InputOTPSlot index={1} className='bg-slate-100' />
-                                        </InputOTPGroup>
-                                        <InputOTPSeparator />
-                                        <InputOTPGroup>
-                                            <InputOTPSlot index={2} className='bg-slate-100' />
-                                            <InputOTPSlot index={3} className='bg-slate-100' />
-                                        </InputOTPGroup>
-                                    </InputOTP>
-                                }
-                                <Button type="submit">Submit</Button>
-                            </form>
-                        </Form>
-                        
-                    </DialogContent>
-                </Dialog>
+                    <div className='flex items-start flex-col bg-white p-8 rounded-md shadow-md mr-16'>
+                        <h2 className='text-2xl font-bold mb-5'>About</h2>
+                        <p>{doctor?.about}</p>
+                    </div>
+                    <div className='flex items-start flex-col bg-white p-8 rounded-md shadow-md mr-16'>
+                        <h2 className='text-2xl font-bold mb-5'>Education</h2>
+                        <ul className='list-disc px-12'>
+                            { doctor?.education?.map(edu => <li className='list-disc mb-2'>{edu}</li>) }
+                        </ul>
+                    </div>
+                    <div className='flex items-start flex-col bg-white p-8 rounded-md shadow-md mr-16'>
+                        <h2 className='text-2xl font-bold mb-5'>Practical Experiences</h2>
+                        <ul className='list-disc px-12'>
+                            { doctor?.practical_experience?.map(prac => <li className='list-disc mb-2'>{prac}</li>) }
+                        </ul>
+                    </div>
+                    <div className='flex items-start flex-col bg-white p-8 rounded-md shadow-md mr-16'>
+                        <h2 className='text-2xl font-bold mb-5'>Awards</h2>
+                        <ul className='list-disc px-12'>
+                            { doctor?.awards?.map(award => <li className='list-disc mb-2'>{award}</li>) }
+                        </ul>
+                    </div>
+                    <div className='flex items-start flex-col bg-white p-8 rounded-md shadow-md mr-16'>
+                        <h2 className='text-2xl font-bold mb-5'>Memberships</h2>
+                        <ul className='list-disc px-12'>
+                            { doctor?.memberships?.map(member => <li className='list-disc mb-2'>{member}</li>) }
+                        </ul>
+                    </div>
+                    <div className='flex items-start flex-col bg-white p-8 rounded-md shadow-md mr-16'>
+                        <h2 className='text-2xl font-bold mb-5'>Languages</h2>
+                        <ul className='list-disc px-12'>
+                            { doctor?.languages?.map(language => <li className='list-disc mb-2'>{language}</li>) }
+                        </ul>
+                    </div>
+                </div>
+                
+                <div className='flex flex-col gap-5 mt-6'>
+                    <Dialog>
+                        <DialogTrigger asChild>
+                            <Button type="button" className='w-[270px] text-lg uppercase font-bold p-8 rounded-md'>Book Now</Button>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-[425px]">
+                            <DialogHeader>
+                                <DialogTitle>Please provide number to continue</DialogTitle>
+                                <DialogDescription>
+                                    Make sure number is active. An OTP will be sent for verification.
+                                </DialogDescription>
+                            </DialogHeader>
+                            <Form {...form}>
+                                <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
+                                    <FormField
+                                    ref={optField}
+                                    control={form.control}
+                                    name="phone"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                        <FormLabel>Phone Number</FormLabel>
+                                        <FormControl>
+                                            <Input className='bg-slate-100 w-full' placeholder="+91" {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                        </FormItem>
+                                    )}
+                                    />
+                                    {optSent &&
+                                        <InputOTP maxLength={4}>
+                                            <InputOTPGroup>
+                                                <InputOTPSlot index={0} className='bg-slate-100' />
+                                                <InputOTPSlot index={1} className='bg-slate-100' />
+                                            </InputOTPGroup>
+                                            <InputOTPSeparator />
+                                            <InputOTPGroup>
+                                                <InputOTPSlot index={2} className='bg-slate-100' />
+                                                <InputOTPSlot index={3} className='bg-slate-100' />
+                                            </InputOTPGroup>
+                                        </InputOTP>
+                                    }
+                                    <Button type="submit">Submit</Button>
+                                </form>
+                            </Form>
+                            
+                        </DialogContent>
+                    </Dialog>
+                </div>
             </div>
         </div>
     )

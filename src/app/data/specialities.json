@@ -47,15 +47,15 @@
         }
     ],
     "specialization" : [
-        {"id": 1, "label": "Gynecologist", "value":"gynecologist", "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/blood-specialist.png"},
-        {"id": 2, "label": "Pediatrician", "value":"pediatrician", "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/child-specialist.png"},
-        {"id": 3, "label": "General Physician", "value":"generalphysician", "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/endocrinologist.png"},
-        {"id": 4, "label": "Dentist", "value":"dentist", "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/ent-specialist.png"},
-        {"id": 5, "label": "Gastroenterologist", "value":"gastroenterologist", "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/eye-specialist.png"},
-        {"id": 6, "label": "Diabetologist", "value":"diabetologist", "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/gynecologist.png"},
-        {"id": 7, "label": "General Surgeon", "value":"generalsurgeon", "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/orthopedic-surgeon.png"},
-        {"id": 8, "label": "Pain Management Specialist", "value":"painmanagement", "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/endocrinologist.png"},
-        {"id": 9, "label": "Pediatric Surgeon", "value":"pediatric", "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/skin-specialist.png"}
+        {"id": 1, "label": "Gynecologist", "value":"gynecologist", "image_url": "https://picsum.photos/id/12/1000/1000"},
+        {"id": 2, "label": "Pediatrician", "value":"pediatrician", "image_url": "https://picsum.photos/id/13/1000/1000"},
+        {"id": 3, "label": "General Physician", "value":"generalphysician", "image_url": "https://picsum.photos/id/14/1000/1000"},
+        {"id": 4, "label": "Dentist", "value":"dentist", "image_url": "https://picsum.photos/id/15/1000/1000"},
+        {"id": 5, "label": "Gastroenterologist", "value":"gastroenterologist", "image_url": "https://picsum.photos/id/16/1000/1000"},
+        {"id": 6, "label": "Diabetologist", "value":"diabetologist", "image_url": "https://picsum.photos/id/17/1000/1000"},
+        {"id": 7, "label": "General Surgeon", "value":"generalsurgeon", "image_url": "https://picsum.photos/id/18/1000/1000"},
+        {"id": 8, "label": "Pain Management Specialist", "value":"painmanagement", "image_url": "https://picsum.photos/id/19/1000/1000"},
+        {"id": 9, "label": "Pediatric Surgeon", "value":"pediatric", "image_url": "https://picsum.photos/id/20/1000/1000"}
     ],
     "doctors": [
         {
@@ -63,16 +63,12 @@
             "value": "aftab",
             "title": "Consultant Internal Medicine",
             "label": "Dr. Aftab Alam",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc1.png",
+            "image_url": "https://picsum.photos/id/1/1000/1000",
             "city": "abudhabi",
             "speciality": "Gynecologist",
             "experience": 10,
             "satisfication_ratio": 99,
             "education_value": "M.B.B.S., F.C.P.S. (Gynecology and Obstetrics)",
-            "education": [
-                "MBBS, MCPS (Gynecology and Obstetrician)",
-                "BDS - Government Dental College, Patiala 2005"
-            ],
             "practical_experience": [
                 "Female Infertility",
                 "Fibroids",
@@ -80,8 +76,10 @@
                 "Female Urinary Problems",
                 "Gynaecological Tumors"
             ],
-            "hospital_name": "NMC Royal Hospital, Abu Dhabi",
-            "speciality_value":"gynecologist",
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
             "awards": [
                 "Attached to college Palmotive ltd - 2015",
                 "Attached to Hospital Indus ltd - 2018"
@@ -96,7 +94,9 @@
                 "Kudish",
                 "English"
             ],
-            "about": "Dr. Iqra Ijaz is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065."
+            "about": "Dr. Aftab Alam is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
+            "hospital_name": "NMC Royal Hospital, Abu Dhabi",
+            "speciality_value":"gynecologist"
             
         },
         {
@@ -107,7 +107,33 @@
             "hospital_name": "NMC Royal Hospital, Dubai",
             "speciality": "Gynecologist",
             "speciality_value":"gynecologist",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc2.png"
+            "practical_experience": [
+                "Female Infertility",
+                "Fibroids",
+                "High Risk Pregnancy",
+                "Female Urinary Problems",
+                "Gynaecological Tumors"
+            ],
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
+            "awards": [
+                "Attached to college Palmotive ltd - 2015",
+                "Attached to Hospital Indus ltd - 2018"
+            ],
+            "memberships": [
+                "Pakistan Dental Association",
+                "Islamabad Dental Association",
+                "Pakistan Society of Oral Impantanologist"
+            ],
+            "languages": [
+                "Arabic",
+                "Kudish",
+                "English"
+            ],
+            "about": "Dr. Roshan Ali is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
+            "image_url": "https://picsum.photos/id/2/1000/1000"
             
         },
         {
@@ -118,7 +144,33 @@
             "speciality_value":"gynecologist",
             "hospital_name": "NMC Royal Hospital, Nahwah",
             "city": "nahwah",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc3.png"
+            "practical_experience": [
+                "Female Infertility",
+                "Fibroids",
+                "High Risk Pregnancy",
+                "Female Urinary Problems",
+                "Gynaecological Tumors"
+            ],
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
+            "awards": [
+                "Attached to college Palmotive ltd - 2015",
+                "Attached to Hospital Indus ltd - 2018"
+            ],
+            "memberships": [
+                "Pakistan Dental Association",
+                "Islamabad Dental Association",
+                "Pakistan Society of Oral Impantanologist"
+            ],
+            "languages": [
+                "Arabic",
+                "Kudish",
+                "English"
+            ],
+            "about": "Dr. Papan Khan is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
+            "image_url": "https://picsum.photos/id/3/1000/1000"
         },
         {
             "id": 4,
@@ -128,7 +180,33 @@
             "speciality_value":"pediatrician",
             "hospital_name": "NMC Royal Hospital, Ash",
             "city": "ash",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc4.png"
+            "practical_experience": [
+                "Female Infertility",
+                "Fibroids",
+                "High Risk Pregnancy",
+                "Female Urinary Problems",
+                "Gynaecological Tumors"
+            ],
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
+            "awards": [
+                "Attached to college Palmotive ltd - 2015",
+                "Attached to Hospital Indus ltd - 2018"
+            ],
+            "memberships": [
+                "Pakistan Dental Association",
+                "Islamabad Dental Association",
+                "Pakistan Society of Oral Impantanologist"
+            ],
+            "languages": [
+                "Arabic",
+                "Kudish",
+                "English"
+            ],
+            "about": "Dr. Dost Muhammad is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
+            "image_url": "https://picsum.photos/id/4/1000/1000"
         },
         {
             "id": 5,
@@ -138,7 +216,33 @@
             "speciality_value":"generalphysician",
             "hospital_name": "NMC Royal Hospital, Badiyah",
             "label": "Dr. Hajira Shaikh",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc5.jpeg"
+            "practical_experience": [
+                "Female Infertility",
+                "Fibroids",
+                "High Risk Pregnancy",
+                "Female Urinary Problems",
+                "Gynaecological Tumors"
+            ],
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
+            "awards": [
+                "Attached to college Palmotive ltd - 2015",
+                "Attached to Hospital Indus ltd - 2018"
+            ],
+            "memberships": [
+                "Pakistan Dental Association",
+                "Islamabad Dental Association",
+                "Pakistan Society of Oral Impantanologist"
+            ],
+            "languages": [
+                "Arabic",
+                "Kudish",
+                "English"
+            ],
+            "about": "Dr. Hajira Shaikh is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
+            "image_url": "https://picsum.photos/id/5/1000/1000"
         },
         {
             "id": 6,
@@ -147,8 +251,34 @@
             "speciality": "Dentist",
             "speciality_value":"dentist",
             "label": "Dr. Muhammad Tahir",
+            "practical_experience": [
+                "Female Infertility",
+                "Fibroids",
+                "High Risk Pregnancy",
+                "Female Urinary Problems",
+                "Gynaecological Tumors"
+            ],
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
+            "awards": [
+                "Attached to college Palmotive ltd - 2015",
+                "Attached to Hospital Indus ltd - 2018"
+            ],
+            "memberships": [
+                "Pakistan Dental Association",
+                "Islamabad Dental Association",
+                "Pakistan Society of Oral Impantanologist"
+            ],
+            "languages": [
+                "Arabic",
+                "Kudish",
+                "English"
+            ],
+            "about": "Dr. Muhammad Tahir is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
             "hospital_name": "NMC Royal Hospital, Badiyah",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc6.jpeg"
+            "image_url": "https://picsum.photos/id/6/1000/1000"
         },
         {
             "id": 7,
@@ -157,8 +287,34 @@
             "speciality": "Gastroenterologist",
             "speciality_value":"gastroenterologist",
             "label": "Dr. Aamna Mahesar",
+            "practical_experience": [
+                "Female Infertility",
+                "Fibroids",
+                "High Risk Pregnancy",
+                "Female Urinary Problems",
+                "Gynaecological Tumors"
+            ],
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
+            "awards": [
+                "Attached to college Palmotive ltd - 2015",
+                "Attached to Hospital Indus ltd - 2018"
+            ],
+            "memberships": [
+                "Pakistan Dental Association",
+                "Islamabad Dental Association",
+                "Pakistan Society of Oral Impantanologist"
+            ],
+            "languages": [
+                "Arabic",
+                "Kudish",
+                "English"
+            ],
+            "about": "Dr. Aamna Mahesar is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
             "hospital_name": "NMC Royal Hospital, Badiyah",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc7.jpeg"
+            "image_url": "https://picsum.photos/id/7/1000/1000"
         },
         {
             "id": 8,
@@ -168,7 +324,33 @@
             "speciality_value":"diabetologist",
             "hospital_name": "NMC Royal Hospital, Badiyah",
             "label": "Dr. Suman Mahesar",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc8.png"
+            "practical_experience": [
+                "Female Infertility",
+                "Fibroids",
+                "High Risk Pregnancy",
+                "Female Urinary Problems",
+                "Gynaecological Tumors"
+            ],
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
+            "awards": [
+                "Attached to college Palmotive ltd - 2015",
+                "Attached to Hospital Indus ltd - 2018"
+            ],
+            "memberships": [
+                "Pakistan Dental Association",
+                "Islamabad Dental Association",
+                "Pakistan Society of Oral Impantanologist"
+            ],
+            "languages": [
+                "Arabic",
+                "Kudish",
+                "English"
+            ],
+            "about": "Dr. Suman Mahesar is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
+            "image_url": "https://picsum.photos/id/8/1000/1000"
         },
         {
             "id": 9,
@@ -178,7 +360,33 @@
             "speciality_value":"generalsurgeon",
             "hospital_name": "NMC Royal Hospital, Badiyah",
             "label": "Dr. Abdul Hadi",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc9.png"
+            "practical_experience": [
+                "Female Infertility",
+                "Fibroids",
+                "High Risk Pregnancy",
+                "Female Urinary Problems",
+                "Gynaecological Tumors"
+            ],
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
+            "awards": [
+                "Attached to college Palmotive ltd - 2015",
+                "Attached to Hospital Indus ltd - 2018"
+            ],
+            "memberships": [
+                "Pakistan Dental Association",
+                "Islamabad Dental Association",
+                "Pakistan Society of Oral Impantanologist"
+            ],
+            "languages": [
+                "Arabic",
+                "Kudish",
+                "English"
+            ],
+            "about": "Dr. Abdul Hadi is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
+            "image_url": "https://picsum.photos/id/9/1000/1000"
         },
         {
             "id": 10,
@@ -188,7 +396,33 @@
             "speciality_value":"painmanagement",
             "hospital_name": "NMC Royal Hospital, Badiyah",
             "label": "Dr. Ravi Kumar",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc10.png"
+            "practical_experience": [
+                "Female Infertility",
+                "Fibroids",
+                "High Risk Pregnancy",
+                "Female Urinary Problems",
+                "Gynaecological Tumors"
+            ],
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
+            "awards": [
+                "Attached to college Palmotive ltd - 2015",
+                "Attached to Hospital Indus ltd - 2018"
+            ],
+            "memberships": [
+                "Pakistan Dental Association",
+                "Islamabad Dental Association",
+                "Pakistan Society of Oral Impantanologist"
+            ],
+            "languages": [
+                "Arabic",
+                "Kudish",
+                "English"
+            ],
+            "about": "Dr. Ravi Kumar is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
+            "image_url": "https://picsum.photos/id/10/1000/1000"
         },
         {
             "id": 11,
@@ -198,7 +432,33 @@
             "speciality_value":"pediatric",
             "hospital_name": "NMC Royal Hospital, Badiyah",
             "label": "Dr. Shanti Lal",
-            "image_url": "http://localhost/wp-react/server/wp-content/uploads/2024/09/doc11.jpeg"
+            "practical_experience": [
+                "Female Infertility",
+                "Fibroids",
+                "High Risk Pregnancy",
+                "Female Urinary Problems",
+                "Gynaecological Tumors"
+            ],
+            "education": [
+                "MBBS, MCPS (Gynecology and Obstetrician)",
+                "BDS - Government Dental College, Patiala 2005"
+            ],
+            "awards": [
+                "Attached to college Palmotive ltd - 2015",
+                "Attached to Hospital Indus ltd - 2018"
+            ],
+            "memberships": [
+                "Pakistan Dental Association",
+                "Islamabad Dental Association",
+                "Pakistan Society of Oral Impantanologist"
+            ],
+            "languages": [
+                "Arabic",
+                "Kudish",
+                "English"
+            ],
+            "about": "Dr. Shanti Lal is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
+            "image_url": "https://picsum.photos/id/11/1000/1000"
         }
     ]
 }

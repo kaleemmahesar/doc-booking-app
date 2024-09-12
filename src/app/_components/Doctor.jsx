@@ -63,36 +63,24 @@ function Doctor({doctor, locale}) {
     
     return (
         <div className='flex w-full rounded-md p-6 bg-white shadow-lg items-start'>
-            <Image src={doctor.image_url}  width={130} height={130} alt='doc' className='mt-5 rounded-full' />
-            <Card className={`border-0 p-0 flex flex-col shadow-none ${locale === 'en' ? 'mr-auto ml-6' : 'ml-auto mr-6'}`}>
-                
+            <Link href={`/${locale}/doctors/profile/${doctor.id}`}><Image src={doctor.image_url}  width={115} height={115} alt='doc' className='mt-5 rounded-full' /></Link>
+            <Card className={`border-0 p-0 flex flex-col shadow-none ${locale === 'en' ? 'ml-6 mr-20' : 'mr-6 ml-20'}`}>
                 <CardHeader className="p-0 flex flex-row gap-5">
                     <div className='mt-8 flex gap-y-1 flex-col justify-between'>
-                        <CardTitle className='text-2xl mb-3'>{doctor.label}</CardTitle>
+                        <CardTitle className='text-3xl mb-2 font-bold'><Link href={`/${locale}/doctors/profile/${doctor.id}`}>{doctor.label}</Link></CardTitle>
                         <p className='text-lg'>{doctor.speciality}</p>
-                        <p className='text-lg'>M.B.B.S., F.C.P.S. (Gynecology and Obstetrics)</p>
-                        <p className='text-lg capitalize'>{doctor.city}</p>
+                        <p className='text-lg'>21 Years of Experience</p>
                     </div>
                 </CardHeader>
-                <div className='mt-8 flex gap-y-1 flex-row gap-16'>
-                    <h2 className='flex flex-col text-lg'>
-                        <b>15 - 30 Min</b>
-                        <span>Wait Time</span>
-                    </h2>
-                    <hr className='border-r mt-2 border-gray-200 h-[46px]' />
-                    <h2 className='flex flex-col text-lg'>
-                        <b>16 Years</b>
-                        <span>Experience</span>
-                    </h2>
-                </div>
             </Card>
-            <div className='flex flex-col gap-5 mt-6'>
-                <Link href={`/${locale}/doctors/profile/${doctor.id}`} className={buttonVariants({ variant: "outline"})}>
-                    <span className='text-md'>View Profile</span>
-                </Link>
+            <div className='flex flex-col'>
+                <h2 className='mb-5 font-bold text-2xl'>Specializations</h2>
+                <div className='gap-2 flex w-96 flex-wrap mb-8'>
+                    { doctor?.practical_experience?.map(person => <Button type="button" variant="secondary" className='font-bold py-0 px-3'>{person}</Button>) }
+                </div>
                 <Dialog>
                     <DialogTrigger asChild>
-                        <Button type="button" className='w-48 text-lg p-6 rounded-md'>Book Now</Button>
+                        <Button type="button" className='w-full text-lg p-6 rounded-md'>Book Now</Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[425px]">
                         <DialogHeader>
@@ -136,6 +124,9 @@ function Doctor({doctor, locale}) {
                         
                     </DialogContent>
                 </Dialog>
+            </div>
+            <div className='flex flex-col gap-5 mt-6'>
+                
             </div>
         </div>
     )
