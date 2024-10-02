@@ -33,6 +33,10 @@ function Appointment({ searchParams, params: { locale } }) {
                             <TableCell><b>{appointmentDetails?.emailAddress}</b></TableCell>
                         </TableRow>
                         <TableRow>
+                            <TableCell>Facility Name</TableCell>
+                            <TableCell><b>{appointmentDetails?.facility}</b></TableCell>
+                        </TableRow>
+                        <TableRow>
                             <TableCell>Appointment Doctor</TableCell>
                             <TableCell><b>{appointmentDetails?.selectedDoc}</b></TableCell>
                         </TableRow>

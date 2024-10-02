@@ -47,7 +47,8 @@ const formSchema = z.object({
     fullName: z.string(),
     phone: z.string().min(13, {
         message: "Please provide a valid number.",
-    })
+    }),
+    facility: z.string(),
 })
 
 import { Label } from "@/components/ui/label"
@@ -56,7 +57,13 @@ import { CarouselContent, Carousel, CarouselItem, CarouselPrevious, CarouselNext
 import Stepper from './Stepper'
 import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
-
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
 
 function Doctor({ doctor, locale, popupState }) {
     const [optSent, setOptSent] = useState(false)
@@ -72,7 +79,8 @@ function Doctor({ doctor, locale, popupState }) {
         defaultValues: {
             phone: '',
             emailAddress: '',
-            fullName: ''
+            fullName: '',
+            facility:''
         },
     })
 
@@ -169,6 +177,30 @@ function Doctor({ doctor, locale, popupState }) {
                             <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-4">
                                 {formStep === 1 &&
                                     <>
+                                        {activeDivPopup && 
+                                        <FormField
+                                            control={form.control}
+                                            name="facility"
+                                            render={({ field }) => (
+                                                <FormItem>
+                                                    <FormLabel>Select Facility</FormLabel>
+                                                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                                        <FormControl>
+                                                            <SelectTrigger>
+                                                                <SelectValue placeholder="NMC Royal Dubai" />
+                                                            </SelectTrigger>
+                                                        </FormControl>
+                                                        <SelectContent>
+                                                            <SelectItem value="NMC Royal Hospital, Abu Dhabi">NMC Royal Hospital, Abu Dhabi</SelectItem>
+                                                            <SelectItem value="DMC Royal Hospital, Dubai">DMC Royal Hospital, Dubai</SelectItem>
+                                                            <SelectItem value="KMC Royal Hospital, Sharjah">KMC Royal Hospital, Sharjah</SelectItem>
+                                                        </SelectContent>
+                                                    </Select>
+                                                    <FormMessage />
+                                                </FormItem>
+                                            )}
+                                        />
+                                        }
                                         <h2 className='font-bold text-sm'>Select Date</h2>
                                         <Carousel className="">
                                             <CarouselContent className="-ml-1">
