@@ -58,7 +58,7 @@ import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 
 
-function Doctor({ doctor, locale }) {
+function Doctor({ doctor, locale, popupState }) {
     const [optSent, setOptSent] = useState(false)
     const optField = useRef(null)
     const [pvalue, setPvalue] = useState(33.33)
@@ -82,8 +82,8 @@ function Doctor({ doctor, locale }) {
         if (values.phone) {
             setOptSent(true)
         }
-        if(values.phone && values.fullName && values.emailAddress) {
-            const valuesObject = await {...values, selectedTime:activeTime, selectedDate:activeDate, selectedDoc:doctor.label}
+        if (values.phone && values.fullName && values.emailAddress) {
+            const valuesObject = await { ...values, selectedTime: activeTime, selectedDate: activeDate, selectedDoc: doctor.label }
             console.log(valuesObject)
             sessionStorage.setItem("appointment", JSON.stringify(valuesObject))
             router.push(`/${locale}/appointment`)
@@ -120,6 +120,7 @@ function Doctor({ doctor, locale }) {
     const dates = getDateRange(startDate, endDate);
     const [activeDate, setActiveDay] = useState()
     const [activeTime, setActiveTime] = useState()
+    const [activeDivPopup, setActiveDivPopup] = useState(false)
     // console.log('dates: ', dates);
     // console.log(startDate)
     // console.log(endDate)
@@ -135,43 +136,46 @@ function Doctor({ doctor, locale }) {
         setFormTime(time);
         console.log(formTime)
     }
+
+    const handleModalLook = () => {
+        setActiveDivPopup(true)
+        sessionStorage.setItem('popupVisible', activeDivPopup)
+    }
     return (
-        <div className='flex w-full rounded-md p-6 bg-white shadow-lg items-start'>
-            <Link href={`/${locale}/doctors/profile/${doctor.id}`}><Image src={doctor.image_url} width={115} height={115} alt='doc' className='mt-5 rounded-full' /></Link>
-            <Card className={`border-0 p-0 flex flex-col shadow-none ${locale === 'en' ? 'ml-6 mr-20' : 'mr-6 ml-20'}`}>
-                <CardHeader className="p-0 flex flex-row gap-5">
-                    <div className='mt-8 flex gap-y-1 flex-col justify-between'>
-                        <CardTitle className='text-3xl mb-2 font-bold'><Link href={`/${locale}/doctors/profile/${doctor.id}`}>{doctor.label}</Link></CardTitle>
-                        <p className='text-lg'>{doctor.speciality}</p>
-                        <p className='text-lg'>21 Years of Experience</p>
-                    </div>
-                </CardHeader>
-            </Card>
-            <div className='flex flex-col'>
+        <div className='flex gap-5 w-full rounded-md p-6 bg-white shadow-lg items-start'>
+            <div className='flex w-1/3'>
+                <Link href={`/${locale}/doctors/profile/${doctor.id}`}><Image src={doctor.image_url} width={85} height={115} alt='doc' className='mt-5 rounded-full' /></Link>
+                <Card className={`border-0 p-0 flex flex-col shadow-none ${locale === 'en' ? 'ml-6' : 'mr-6'}`}>
+                    <CardHeader className="p-0 flex flex-row gap-5">
+                        <div className='mt-5 flex gap-y-1 flex-col justify-between'>
+                            <CardTitle className='text-2xl mb-1 font-bold'><Link href={`/${locale}/doctors/profile/${doctor.id}`}>{doctor.label}</Link></CardTitle>
+                            <p className='text-md'>{doctor.speciality}</p>
+                            <p className='text-md'>21 Years of Experience</p>
+                        </div>
+                    </CardHeader>
+                </Card>
+            </div>
+            <div className='flex flex-col w-1/3'>
                 <h2 className='mb-5 font-bold text-2xl'>Specializations</h2>
                 <div className='gap-2 flex w-96 flex-wrap mb-8'>
                     {doctor?.practical_experience?.map(person => <Button key={person} type="button" variant="secondary" className='font-bold py-0 px-3'>{person}</Button>)}
                 </div>
-                <Dialog>
-                    <DialogTrigger asChild>
-                        <Button type="button" className='w-full text-lg p-6 rounded-md'>Book Now</Button>
-                    </DialogTrigger>
-                    <DialogContent className="md:max-w-[50%] md:min-w-[768px]">
-                        <DialogHeader>
-                            {/* <ProgressBar pvalue={pvalue} /> */}
-                            <Stepper formStep={formStep} />
-                        </DialogHeader>
-                        <Form {...form}>
-                            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
+                {!activeDivPopup && <Button type="button" className='w-full text-lg p-6 rounded-md' onClick={handleModalLook}>Book Now</Button> }
+            </div>
+            {activeDivPopup && <div className='popup-wrapper'></div>}
+            <div className={`${activeDivPopup && 'makeActive'} flex flex-col w-1/3 gap-5 rounded-xl`} onClick={handleModalLook}>
+                {activeDivPopup && <Stepper formStep={formStep} /> }
+                <Form {...form}>
+                            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-4">
                                 {formStep === 1 &&
                                     <>
-                                        <h2 className='font-bold'>Select Date</h2>
+                                        <h2 className='font-bold text-sm'>Select Date</h2>
                                         <Carousel className="">
                                             <CarouselContent className="-ml-1">
                                                 {dates.map((date, index) => {
                                                     return (
-                                                        <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                                                            <Button type="button" key={date} variant="outline" className={activeDate === date ? 'w-full activeBtn' : 'w-full'} onClick={() =>showAllTimes(date)}>{date}</Button>
+                                                        <CarouselItem className="md:basis-1/3 lg:basis-1/3">
+                                                            <Button type="button" key={date} variant="outline" className={`${activeDate === date && 'activeBtn'} w-auto min-w-full p-3 h-auto bg-transparent border text-black`} onClick={() => showAllTimes(date)}>{date}</Button>
                                                         </CarouselItem>
                                                     )
                                                 })}
@@ -179,13 +183,13 @@ function Doctor({ doctor, locale }) {
                                             <CarouselPrevious />
                                             <CarouselNext />
                                         </Carousel>
-                                        <h2 className='font-bold'>Select Time</h2>
-                                        <div className='grid grid-cols-4 gap-4'>
-                                        {
-                                            timeSlots.map((time) => {
-                                                return <Button key={time} type="button" variant="outline" className={activeTime === time ? 'activeBtn' : ''} onClick={() =>setTime(time)}>{time}</Button>
-                                            })
-                                        }
+                                        <h2 className='font-bold text-sm'>Select Time</h2>
+                                        <div className='grid grid-cols-4 gap-3'>
+                                            {
+                                                timeSlots.map((time) => {
+                                                    return <Button key={time} type="button" variant="outline" className={`${activeTime === time && 'activeBtn'} p-2 h-auto bg-transparent border text-black`} onClick={() => setTime(time)}>{time}</Button>
+                                                })
+                                            }
                                         </div>
                                     </>
 
@@ -205,7 +209,7 @@ function Doctor({ doctor, locale }) {
                                                 </FormItem>
                                             )}
                                         />
-                                        {optSent && 
+                                        {optSent &&
                                             <>
                                                 <h2>OPT</h2>
                                                 <InputOTP maxLength={4}>
@@ -220,10 +224,10 @@ function Doctor({ doctor, locale }) {
                                                     </InputOTPGroup>
                                                 </InputOTP>
                                             </>
-                                        }        
+                                        }
                                     </>
                                 }
-                                {formStep === 3 && 
+                                {formStep === 3 &&
                                     <>
                                         <FormField
                                             control={form.control}
@@ -253,21 +257,17 @@ function Doctor({ doctor, locale }) {
                                         />
                                     </>
                                 }
-                                
-                            
-                                <DialogFooter className='flex flex-row sm:justify-between gap-0 mt-6 mb-3'>
-                                    <Button type="button" className={`${formStep === 1 ? 'opacity-50' : 'active-btn'}`} onClick={handlePrev}>Previous</Button>
-                                    <Button type="button" className={`${formStep === 3 || formStep === 2 && !optSent ? 'hidden' : 'show'}`} onClick={handleNext}>Next</Button>
-                                    <Button type="submit" className={`${formStep === 3 || formStep === 2 && !optSent ? 'show' : 'hidden'}`}>Submit</Button>
-                                </DialogFooter>
+
+                                {activeDivPopup &&
+                                    <div className='flex flex-row sm:justify-between gap-0 mt-6 mb-3'>
+                                        <Button type="button" variant="outline" className={`${formStep === 1 ? 'opacity-50' : 'active-btn'}`} onClick={handlePrev}>Previous</Button>
+                                        <Button type="button" className={`${formStep === 3 || formStep === 2 && !optSent ? 'hidden' : 'show'}`} onClick={handleNext}>Next</Button>
+                                        <Button type="submit" className={`${formStep === 3 || formStep === 2 && !optSent ? 'show' : 'hidden'}`}>Book Now</Button>
+                                    </div>
+                                }
                             </form>
                         </Form>
-                    </DialogContent>
-
-                </Dialog>
-            </div>
-            <div className='flex flex-col gap-5 mt-6'>
-
+                
             </div>
         </div>
     )
