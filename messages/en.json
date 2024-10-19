@@ -3,9 +3,9 @@
 		"title": "Search Doctor, Make an Appointment",
 		"slug": "Discover the best doctor, clinic & hospital the city nearist to you.",
 		"cityFieldValue": "Select City",
-		"docFieldValue": "Find by speciality, doctor, clinic or hospital",
+		"docFieldValue": "Find by speciality",
         "docsLabelValue": "Doctors List",
-        "specialLabel": "Specialization List",
+        "specialLabel": "Most Popular specialities",
     "specialization" : [
         {"id": 1, "label": "Gynecologist", "value":"Gynecologist"},
         {"id": 2, "label": "Pediatrician", "value":"Pediatrician"},
@@ -14,7 +14,7 @@
         {"id": 5, "label": "Gastroenterologist", "value":"gastroenterologist"},
         {"id": 6, "label": "Diabetologist", "value":"diabetologist"},
         {"id": 7, "label": "General Surgeon", "value":"generalsurgeon"},
-        {"id": 8, "label": "Pain Management Specialist", "value":"painmanagement"},
+        {"id": 8, "label": "Pain Management", "value":"painmanagement"},
         {"id": 9, "label": "Pediatric Surgeon", "value":"pediatric"}
     ],
     "doctors": [

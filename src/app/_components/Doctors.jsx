@@ -6,7 +6,7 @@ function Doctors({doctors,searchQuery, locale}) {
     return (
         <div className='doctors-list'>
             <div className="py-6">
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-6">
             {
                 doctors?.map((doctor, index) => {
                     if(searchQuery?.city !== undefined && searchQuery.doctor !== undefined) {

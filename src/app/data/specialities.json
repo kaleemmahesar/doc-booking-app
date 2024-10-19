@@ -2,48 +2,18 @@
     "cities": [
         {
             "id": 1,
-            "value": "dubai",
-            "label": "Dubai"
+            "value": "erbil",
+            "label": "Erbil"
         },
         {
             "id": 2,
-            "value": "abudhabi",
-            "label": "Abu Dhabi"
+            "value": "duhok",
+            "label": "Duhok"
         },
         {
             "id": 3,
-            "value": "sharjah",
-            "label": "Sharjah"
-        },
-        {
-            "id": 4,
-            "value": "alfujayrah",
-            "label": "Al Fujayrah"
-        },
-        {
-            "id": 5,
-            "value": "badiyah",
-            "label": "Badiyah"
-        },
-        {
-            "id": 6,
-            "value": "zubarah",
-            "label": "Zubārah"
-        },
-        {
-            "id": 7,
-            "value": "ash",
-            "label": "Ash Sha‘m"
-        },
-        {
-            "id": 8,
-            "value": "huwaylat",
-            "label": "Huwaylāt"
-        },
-        {
-            "id": 9,
-            "value": "nahwah",
-            "label": "Naḩwah"
+            "value": "silemani",
+            "label": "Silemani"
         }
     ],
     "specialization" : [
@@ -54,8 +24,9 @@
         {"id": 5, "label": "Gastroenterologist", "value":"gastroenterologist", "image_url": "https://picsum.photos/id/16/1000/1000"},
         {"id": 6, "label": "Diabetologist", "value":"diabetologist", "image_url": "https://picsum.photos/id/17/1000/1000"},
         {"id": 7, "label": "General Surgeon", "value":"generalsurgeon", "image_url": "https://picsum.photos/id/18/1000/1000"},
-        {"id": 8, "label": "Pain Management Specialist", "value":"painmanagement", "image_url": "https://picsum.photos/id/19/1000/1000"},
-        {"id": 9, "label": "Pediatric Surgeon", "value":"pediatric", "image_url": "https://picsum.photos/id/20/1000/1000"}
+        {"id": 8, "label": "Pain Management", "value":"painmanagement", "image_url": "https://picsum.photos/id/19/1000/1000"},
+        {"id": 9, "label": "Pediatric Surgeon", "value":"pediatric", "image_url": "https://picsum.photos/id/20/1000/1000"},
+        {"id": 10, "label": "Neurologist", "value":"neuro", "image_url": "https://picsum.photos/id/21/1000/1000"}
     ],
     "doctors": [
         {

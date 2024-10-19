@@ -26,7 +26,7 @@ import {
     CommandItem,
     CommandList,
 } from "@/components/ui/command"
-import { CheckIcon, LocateFixedIcon, MapPin, Search } from "lucide-react"
+import { CheckIcon, LocateFixedIcon, MapPin, Search, Stethoscope } from "lucide-react"
 import { useRef, useState } from "react"
 import { redirect, usePathname } from "next/navigation"
 import { useRouter } from "next/navigation"
@@ -58,7 +58,7 @@ function BasicForm({cityField, docField, specialities, specialLabel, docsLabelVa
 
     // 2. Define a submit handler.
     function onSubmit(values) {
-        const doctorLabel = myRef.current.id
+        const doctorLabel = SpecialityInputRef.current.id
         console.log(values)
         if (values.city !== '' && doctorLabel !== '') {
             router.push(`${pathname}/search?city=${values.city}&doctor=${doctorLabel}`)
@@ -91,83 +91,24 @@ function BasicForm({cityField, docField, specialities, specialLabel, docsLabelVa
     }
     const handleInputBlur = () => {
         setFieldFocused(false)
+        
     }
     const handleInputFieldValue = ({label, value}) => {
         console.log('working')
         setDocFieldValue(value)
-        myRef.current.value = label;
-        myRef.current.id = value
+        SpecialityInputRef.current.value = label;
+        SpecialityInputRef.current.id = value
         setFieldFocused(false)
     }
     const openDocMenu = () => {
         setFieldFocused(true)
     }
     // Create a ref using the useRef hook
-    const myRef = useRef(null);
+    const SpecialityInputRef = useRef(null);
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="flex gap-4 relative">
-                <FormField
-                    className="space-y-0"
-                    control={form.control}
-                    name="city"
-                    render={({ field }) => (
-                        <FormItem className="flex flex-col">
-                            <Popover open={openLanguage} onOpenChange={setopenLanguage}>
-                                <PopoverTrigger asChild>
-                                    <FormControl>
-                                        <Button
-                                            variant="outline"
-                                            role="combobox"
-                                            className={cn(
-                                                "w-[225px] border-0 bg-slate-100 h-16 justify-between text-md",
-                                                !field.value && "text-muted-foreground"
-                                            )}
-                                        >
-                                            {field.value
-                                                ? specialities?.cities.find(
-                                                    (city) => city.value === field.value
-                                                )?.label
-                                                : cityField}
-                                            <CaretDownIcon className="ml-2 h-6 w-6 shrink-0 opacity-50" />
-                                        </Button>
-                                    </FormControl>
-                                </PopoverTrigger>
-                                <PopoverContent className="w-[235px] p-0">
-                                    <Command>
-                                        <CommandInput placeholder={cityField} />
-                                        <CommandList>
-                                            <CommandEmpty>No language found.</CommandEmpty>
-                                            <CommandGroup>
-                                                {specialities?.cities.map((city) => (
-                                                    <CommandItem
-                                                        value={city.label}
-                                                        key={city.value}
-                                                        onSelect={() => {
-                                                            form.setValue("city", city.value)
-                                                            setopenLanguage(false)
-                                                        }}
-                                                    >
-                                                        <CheckIcon
-                                                            className={cn(
-                                                                "mr-2 h-4 w-4",
-                                                                city.value === field.value
-                                                                    ? "opacity-100"
-                                                                    : "opacity-0"
-                                                            )}
-                                                        />
-                                                        {city.label}
-                                                    </CommandItem>
-                                                ))}
-                                            </CommandGroup>
-                                        </CommandList>
-                                    </Command>
-                                </PopoverContent>
-                            </Popover>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
+            <form onSubmit={form.handleSubmit(onSubmit)} className="flex relative bg-slate-50 py-2 px-4 rounded-full">
+                
                 {/* <FormField
                     control={form.control}
                     name="doctor"
@@ -229,8 +170,8 @@ function BasicForm({cityField, docField, specialities, specialLabel, docsLabelVa
                     )}
                 /> */}
                 <div className="relative">
-                    <Input ref={myRef} className='outline-none text-md focus:outline-none focus:ring-0 rounded-md h-16 border-0 px-5 ring-0 bg-slate-100 w-[400px]' placeholder={docField} onBlur={handleInputBlur} onFocus={openDocMenu} onChange={(e) => handleInputChange(e.target.value)} />
-                    
+                    <Input ref={SpecialityInputRef} className='pr-2 pl-9 outline-none hover:bg-red-500 text-md focus:outline-none focus:ring-0 active:shadow-none  rounded-full h-12 border-0 bg-transparent hover:bg-transparent active:ring-0 active:outline-none active:border-0 ring-0 w-[400px]' placeholder={docField} onBlur={handleInputBlur} onFocus={openDocMenu} onChange={(e) => handleInputChange(e.target.value)} />
+                    <Stethoscope className="absolute top-3 left-1 opacity-90 text-gray-600" />
                     <div className={`flex flex-col absolute h-[300px] overflow-y-auto right-0 top-20 rounded-md shadow-lg bg-white w-[400px] ${fieldFocused ? 'opacity-100' : 'opacity-0'}`}>
                     
                             <h2 className="text-xl mt-5 mb-3 px-5 text-slate-400">{specialLabel}</h2>
@@ -251,9 +192,9 @@ function BasicForm({cityField, docField, specialities, specialLabel, docsLabelVa
                         )
                     })
                 : 
-                    <div className='w-full capitalize text-primary p-6 text-lg border-0 bg-transparent hover:bg-transparent text-left justify-start'>No Specialization Found</div>
+                    <div className='w-full capitalize text-primary p-6 text-lg border-0 bg-transparent hover:bg-transparent text-left justify-start'></div>
                 }
-                <h2 className="text-xl mt-5 mb-3 px-5 text-slate-400">{docsLabelValue}</h2>
+                {/* <h2 className="text-xl mt-5 mb-3 px-5 text-slate-400">{docsLabelValue}</h2>
                     {doctorsList.length > 0 ?
                     
                                 doctorsList?.map((doctor) => {
@@ -271,7 +212,7 @@ function BasicForm({cityField, docField, specialities, specialLabel, docsLabelVa
                                 })
                             : 
                                 <div className='w-full capitalize text-primary p-6 text-lg border-0 bg-transparent hover:bg-transparent text-left justify-start'>No Doctors Found</div>
-                            }
+                            } */}
                         </div>
                     {/* {fieldFocused && 
                         <div className="flex flex-col absolute right-0 top-20 rounded-md shadow-md bg-white w-[450px]">
@@ -287,7 +228,70 @@ function BasicForm({cityField, docField, specialities, specialLabel, docsLabelVa
                         </div>
                     } */}
                 </div>
-                <Button type="submit" className="h-16"><Search className="h-8 w-10 text-xl" /></Button>
+                <FormField
+                    className="space-y-0"
+                    control={form.control}
+                    name="city"
+                    render={({ field }) => (
+                        <FormItem className="flex flex-col">
+                            <Popover open={openLanguage} onOpenChange={setopenLanguage}>
+                                <PopoverTrigger asChild>
+                                    <FormControl>
+                                        <Button
+                                            variant="outline"
+                                            role="combobox"
+                                            className={cn(
+                                                "w-[345px] gap-2 border-0 bg-transparent hover:bg-transparent p-0 h-12 text-md justify-start",
+                                                !field.value && "text-muted-foreground"
+                                            )}
+                                        >
+                                            <MapPin className="h-6 w-6 shrink-0 opacity-90" />
+                                            <span>
+                                            {field.value
+                                                ? specialities?.cities.find(
+                                                    (city) => city.value === field.value
+                                                )?.label
+                                                : cityField}
+                                            </span>
+                                        </Button>
+                                    </FormControl>
+                                </PopoverTrigger>
+                                <PopoverContent className="w-[355px] p-0">
+                                    <Command>
+                                        <CommandInput placeholder={cityField} />
+                                        <CommandList>
+                                            <CommandEmpty>No language found.</CommandEmpty>
+                                            <CommandGroup>
+                                                {specialities?.cities.map((city) => (
+                                                    <CommandItem
+                                                        value={city.label}
+                                                        key={city.value}
+                                                        onSelect={() => {
+                                                            form.setValue("city", city.value)
+                                                            setopenLanguage(false)
+                                                        }}
+                                                    >
+                                                        <CheckIcon
+                                                            className={cn(
+                                                                "mr-2 h-4 w-4",
+                                                                city.value === field.value
+                                                                    ? "opacity-100"
+                                                                    : "opacity-0"
+                                                            )}
+                                                        />
+                                                        {city.label}
+                                                    </CommandItem>
+                                                ))}
+                                            </CommandGroup>
+                                        </CommandList>
+                                    </Command>
+                                </PopoverContent>
+                            </Popover>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+                <Button type="submit" className="h-12 w-12 rounded-full"><Search className="h-6 w-6 text-sm" /></Button>
             </form>
         </Form>
     )

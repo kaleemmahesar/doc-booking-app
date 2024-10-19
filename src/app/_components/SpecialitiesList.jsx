@@ -18,13 +18,15 @@ function SpecialitiesList({specializations}) {
                     <h2 className='text-3xl font-bold mb-6'>Consult best doctors online</h2>
                     <Button variant="outline" onClick={()=>handleClick()}>View All</Button>
                 </div>
-                <div className='grid grid-cols-9 gap-x-4 text-center'>
+                <div className='flex text-center flex-wrap gap-4'>
                     {drspecialization.map((drspeciali) => {
                         return (
-                            <Link href={`${pathname}/search?specialization=${drspeciali.value}`} className='flex justify-start items-center flex-col rounded-full'>
-                                <Image src={drspeciali.image_url} className='rounded-full mb-2 border-4 border-primary-500' alt='specialities image' width={100} height={100} />
-                                <h2 className='text-lg'>{drspeciali.label}</h2>
-                            </Link>
+                            <div className='border rounded-md border-gray-200 pt-4 pb-4 w-1/6'>
+                                <Link href={`${pathname}/search?specialization=${drspeciali.value}`} className='flex justify-start items-center flex-col rounded-full'>
+                                    <Image src={drspeciali.image_url} className='rounded-full mb-2' alt='specialities image' width={100} height={100} />
+                                    <h2 className='text-sm flex justify-center'>{drspeciali.label}</h2>
+                                </Link>
+                            </div>
                         )
                     })}
                 </div>
