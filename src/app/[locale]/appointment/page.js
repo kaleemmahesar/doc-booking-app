@@ -18,7 +18,7 @@ function Appointment({ searchParams, params: { locale } }) {
                     <h2 className='text-3xl font-bold mb-6'>Thank You for the appointment</h2>
                     <h4>Your appointment details are shown below.</h4>
                 </div>
-                <Table className='text-md max-w-[600px]'>
+                <Table className='text-md max-w-[750px]'>
                     <TableBody>
                         <TableRow>
                             <TableCell>Full Name</TableCell>
@@ -33,19 +33,11 @@ function Appointment({ searchParams, params: { locale } }) {
                             <TableCell><b>{appointmentDetails?.emailAddress}</b></TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Facility Name</TableCell>
-                            <TableCell><b>{appointmentDetails?.facility}</b></TableCell>
-                        </TableRow>
-                        <TableRow>
                             <TableCell>Appointment Doctor</TableCell>
                             <TableCell><b>{appointmentDetails?.selectedDoc}</b></TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Appointment Date</TableCell>
-                            <TableCell><b>{appointmentDetails?.selectedDate}</b></TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell>Appointment Time</TableCell>
+                            <TableCell>Appointment Details</TableCell>
                             <TableCell><b>{appointmentDetails?.selectedTime}</b></TableCell>
                         </TableRow>
                     </TableBody>

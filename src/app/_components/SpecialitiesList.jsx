@@ -4,7 +4,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
-
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
 function SpecialitiesList({specializations}) {
     const drspecialization = specializations.specialization
     const pathname = usePathname()

@@ -64,6 +64,9 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import HospitalSelector from './HospitalSelector'
+import specialities from '../data/specialities.json'
+    
 
 function Doctor({ doctor, locale, popupState }) {
     const [optSent, setOptSent] = useState(false)
@@ -72,6 +75,7 @@ function Doctor({ doctor, locale, popupState }) {
     const [formStep, setFormStep] = useState(1)
     const [formDay, setFormDay] = useState('')
     const [formTime, setFormTime] = useState('')
+    const [bookingData, setBookingData] = useState("");
     const router = useRouter()
     const pathname = usePathname()
     const form = useForm({
@@ -83,15 +87,19 @@ function Doctor({ doctor, locale, popupState }) {
             facility:''
         },
     })
+    console.log(specialities)
 
-    const timeSlots = ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '01:00', '01:30', '02:00', '02:30', '03:00', '03:30']
+    const bookingInfo = (data) => {
+        setBookingData(data); // Update state with data from the child
+    };
+    // const timeSlots = ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '01:00', '01:30', '02:00', '02:30', '03:00', '03:30']
 
     async function onSubmit(values) {
         if (values.phone) {
             setOptSent(true)
         }
         if (values.phone && values.fullName && values.emailAddress) {
-            const valuesObject = await { ...values, selectedTime: activeTime, selectedDate: activeDate, selectedDoc: doctor.label }
+            const valuesObject = await { ...values, selectedTime: bookingData, selectedDate: formDay, selectedDoc: doctor.label }
             console.log(valuesObject)
             sessionStorage.setItem("appointment", JSON.stringify(valuesObject))
             router.push(`/${locale}/appointment`)
@@ -168,40 +176,41 @@ function Doctor({ doctor, locale, popupState }) {
                 <div className='gap-2 flex w-96 flex-wrap mb-8'>
                     {doctor?.practical_experience?.map(person => <Button key={person} type="button" variant="secondary" className='font-bold py-0 px-3'>{person}</Button>)}
                 </div>
-                {!activeDivPopup && <Button type="button" className='w-full text-lg p-6 rounded-md' onClick={handleModalLook}>Book Now</Button> }
+                <Button type="button" className='w-full text-lg p-6 rounded-md' onClick={handleModalLook}>Book Now</Button>
             </div>
             {activeDivPopup && <div className='popup-wrapper'></div>}
-            <div className={`${activeDivPopup && 'makeActive'} flex flex-col w-1/3 gap-5 rounded-xl`} onClick={handleModalLook}>
+            <div className={`${activeDivPopup && 'makeActive'} flex flex-col w-1/3 gap-5 rounded-xl`}>
                 {activeDivPopup && <Stepper formStep={formStep} /> }
                 <Form {...form}>
                             <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-4">
-                                {formStep === 1 &&
+                            
                                     <>
-                                        {activeDivPopup && 
-                                        <FormField
-                                            control={form.control}
-                                            name="facility"
-                                            render={({ field }) => (
-                                                <FormItem>
-                                                    <FormLabel>Select Facility</FormLabel>
-                                                    <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                                        <FormControl>
-                                                            <SelectTrigger>
-                                                                <SelectValue placeholder="NMC Royal Dubai" />
-                                                            </SelectTrigger>
-                                                        </FormControl>
-                                                        <SelectContent>
-                                                            <SelectItem value="NMC Royal Hospital, Abu Dhabi">NMC Royal Hospital, Abu Dhabi</SelectItem>
-                                                            <SelectItem value="DMC Royal Hospital, Dubai">DMC Royal Hospital, Dubai</SelectItem>
-                                                            <SelectItem value="KMC Royal Hospital, Sharjah">KMC Royal Hospital, Sharjah</SelectItem>
-                                                        </SelectContent>
-                                                    </Select>
-                                                    <FormMessage />
-                                                </FormItem>
-                                            )}
-                                        />
-                                        }
-                                        <h2 className='font-bold text-sm'>Select Date</h2>
+                                        {!activeDivPopup && 
+                                        <>
+                                            <HospitalSelector doctor={doctor} bookinginfo={bookingInfo} />
+                                            <h3 className='my-2'>{bookingData}</h3>
+                                            {/* <FormField
+                                                control={form.control}
+                                                name="facility"
+                                                render={({ field }) => (
+                                                    <FormItem>
+                                                        <Select onValueChange={field.onChange} defaultValue={field.value} value={field.value}>
+                                                            <FormControl>
+                                                                <SelectTrigger>
+                                                                    <SelectValue placeholder="Plaese Select a Facility" />
+                                                                </SelectTrigger>
+                                                            </FormControl>
+                                                            <SelectContent>
+                                                                <SelectItem value="NMC Royal Hospital, Abu Dhabi">NMC Royal Hospital, Abu Dhabi</SelectItem>
+                                                                <SelectItem value="DMC Royal Hospital, Dubai">DMC Royal Hospital, Dubai</SelectItem>
+                                                                <SelectItem value="KMC Royal Hospital, Sharjah">KMC Royal Hospital, Sharjah</SelectItem>
+                                                            </SelectContent>
+                                                        </Select>
+                                                        <FormMessage />
+                                                    </FormItem>
+                                                )}
+                                            /> */}
+                                            {/* <h2 className='font-bold text-sm'>Select Date</h2>
                                         <Carousel className="">
                                             <CarouselContent className="-ml-1">
                                                 {dates.map((date, index) => {
@@ -215,19 +224,25 @@ function Doctor({ doctor, locale, popupState }) {
                                             <CarouselPrevious />
                                             <CarouselNext />
                                         </Carousel>
-                                        <h2 className='font-bold text-sm'>Select Time</h2>
-                                        <div className='grid grid-cols-4 gap-3'>
+                                        <h2 className='font-bold text-sm'>Select Time</h2> */}
+                                        {/* <div className='grid grid-cols-4 gap-3'>
                                             {
                                                 timeSlots.map((time) => {
                                                     return <Button key={time} type="button" variant="outline" className={`${activeTime === time && 'activeBtn'} p-2 h-auto bg-transparent border text-black`} onClick={() => setTime(time)}>{time}</Button>
                                                 })
                                             }
-                                        </div>
+                                        </div> */}
+                                        </>
+                                        }
+                                        
                                     </>
 
-                                }
-                                {formStep === 2 &&
+                                
+                                {formStep === 1 &&
                                     <>
+                                        {activeDivPopup && 
+                                        <>
+                                        {bookingData}
                                         <FormField
                                             control={form.control}
                                             name="phone"
@@ -241,6 +256,8 @@ function Doctor({ doctor, locale, popupState }) {
                                                 </FormItem>
                                             )}
                                         />
+                                        </>
+                                        }
                                         {optSent &&
                                             <>
                                                 <h2>OPT</h2>
@@ -259,7 +276,7 @@ function Doctor({ doctor, locale, popupState }) {
                                         }
                                     </>
                                 }
-                                {formStep === 3 &&
+                                {formStep === 2 &&
                                     <>
                                         <FormField
                                             control={form.control}
@@ -292,9 +309,9 @@ function Doctor({ doctor, locale, popupState }) {
 
                                 {activeDivPopup &&
                                     <div className='flex flex-row sm:justify-between gap-0 mt-6 mb-3'>
-                                        <Button type="button" variant="outline" className={`${formStep === 1 ? 'opacity-50' : 'active-btn'}`} onClick={handlePrev}>Previous</Button>
-                                        <Button type="button" className={`${formStep === 3 || formStep === 2 && !optSent ? 'hidden' : 'show'}`} onClick={handleNext}>Next</Button>
-                                        <Button type="submit" className={`${formStep === 3 || formStep === 2 && !optSent ? 'show' : 'hidden'}`}>Book Now</Button>
+                                        <Button type="button" variant="outline" className={`${formStep === 1 || formStep === 2 ? 'opacity-50' : 'active-btn'}`} onClick={handlePrev}>Previous</Button>
+                                        <Button type="button" className={`${formStep === 2 || formStep === 1 && !optSent ? 'hidden' : 'show'}`} onClick={handleNext}>Next</Button>
+                                        <Button type="submit" className={`${formStep === 2 || formStep === 1 && !optSent ? 'show' : 'hidden'}`}>Book Now</Button>
                                     </div>
                                 }
                             </form>

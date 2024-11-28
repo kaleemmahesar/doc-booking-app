@@ -66,7 +66,119 @@
                 "English"
             ],
             "about": "Dr. Aftab Alam is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
-            "hospital_name": "NMC Royal Hospital, Abu Dhabi",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "speciality_value":"gynecologist"
             
         },
@@ -75,7 +187,119 @@
             "value": "roshan",
             "label": "Dr. Roshan Ali",
             "city": "dubai",
-            "hospital_name": "NMC Royal Hospital, Dubai",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "speciality": "Gynecologist",
             "speciality_value":"gynecologist",
             "practical_experience": [
@@ -113,7 +337,119 @@
             "label": "Dr. Papan Khan",
             "speciality": "Gynecologist",
             "speciality_value":"gynecologist",
-            "hospital_name": "NMC Royal Hospital, Nahwah",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "city": "nahwah",
             "practical_experience": [
                 "Female Infertility",
@@ -149,7 +485,119 @@
             "label": "Dr. Dost Muhammad",
             "speciality": "Pediatrician",
             "speciality_value":"pediatrician",
-            "hospital_name": "NMC Royal Hospital, Ash",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "city": "ash",
             "practical_experience": [
                 "Female Infertility",
@@ -185,7 +633,119 @@
             "city": "badiyah",
             "speciality": "General Physician",
             "speciality_value":"generalphysician",
-            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "label": "Dr. Hajira Shaikh",
             "practical_experience": [
                 "Female Infertility",
@@ -248,7 +808,119 @@
                 "English"
             ],
             "about": "Dr. Muhammad Tahir is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
-            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "image_url": "https://picsum.photos/id/6/1000/1000"
         },
         {
@@ -284,7 +956,119 @@
                 "English"
             ],
             "about": "Dr. Aamna Mahesar is a Gynecologist with 5 years of experience currently available at Online Video Consultation, Faisalabad. You can book an in-person appointment or an online video consultation with Dr. Iqra Ijaz through oladoc.com or by calling at 0415068065.",
-            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "image_url": "https://picsum.photos/id/7/1000/1000"
         },
         {
@@ -293,7 +1077,119 @@
             "city": "badiyah",
             "speciality": "Diabetologist",
             "speciality_value":"diabetologist",
-            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "label": "Dr. Suman Mahesar",
             "practical_experience": [
                 "Female Infertility",
@@ -329,7 +1225,119 @@
             "city": "badiyah",
             "speciality": "General Surgeon",
             "speciality_value":"generalsurgeon",
-            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "label": "Dr. Abdul Hadi",
             "practical_experience": [
                 "Female Infertility",
@@ -365,7 +1373,119 @@
             "city": "badiyah",
             "speciality": "Pain Management Specialist",
             "speciality_value":"painmanagement",
-            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "label": "Dr. Ravi Kumar",
             "practical_experience": [
                 "Female Infertility",
@@ -401,7 +1521,119 @@
             "city": "badiyah",
             "speciality": "Pediatric Surgeon",
             "speciality_value":"pediatric",
-            "hospital_name": "NMC Royal Hospital, Badiyah",
+            "facilities": [
+                {
+                  "name": "City Hospital",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            "9:00 AM",
+                            "10:00 AM",
+                            "11:00 AM"
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                        
+                          ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                              
+                            ]
+                          }
+                      ]
+                },
+                {
+                  "name": "Green Valley Clinic",
+                  "slots": [
+                        {
+                          "day": "Monday",
+                          "times": [
+                            
+                          ]
+                        },
+                        {
+                          "day": "Tuesday",
+                          "times": [
+                                "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                        },
+                        {
+                            "day": "Wednesday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Thursday",
+                            "times": [
+                                "9:00 AM",
+                                "10:00 AM",
+                                "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Friday",
+                            "times": [
+                              "9:00 AM",
+                              "10:00 AM",
+                              "11:00 AM"
+                            ]
+                          },
+                          {
+                            "day": "Saturday",
+                            "times": [
+                              "1:00 PM",
+                              "2:00 PM",
+                              "3:00 PM"
+                            ]
+                          },
+                          {
+                            "day": "Sunday",
+                            "times": [
+                               
+                            ]
+                          }
+                      ]
+                }
+            ],
             "label": "Dr. Shanti Lal",
             "practical_experience": [
                 "Female Infertility",
